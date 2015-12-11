@@ -1,12 +1,14 @@
 tic
-global gather_day gather_rebalance
+global gather_rebalance
 
 % to change assumed gather day:
 % 1) uncomment all part right below
 % 2) insert "end" statement for this loop where needed in the text
 % 2.a) uncomment / insert row for saving "Comparison" storage variable where needed
-% 3) uncomment all required sections (at least 3-6) in this file
+% 3) uncomment all add_word required sections (at least 3-6) in this file
 % 4) comment asset pricing sections in Lustig and Menkhoff files
+
+add_line
 
 % for gday_number = 1 % 0:1:25
 gather_day = 0; % days since past month end (last business day up to set date is taken)
