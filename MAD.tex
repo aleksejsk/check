@@ -1,0 +1,588 @@
+\begin{flushright}
+\textquotedblleft Current account [\ldots] deficits appear not to matter until, well, they suddenly do!\textquotedblright \\
+\citet{sw:1999}, Bank of England Monetary Policy Committee. \\
+\end{flushright}
+
+\section{Introduction} \label{sec:introduction_UNC_CAR}
+Currency are in theory anchored through several channels to macro fundamentals such as short-term interest rate, inflation rate, real output, and external imbalances \citep[e.g.,][]{engel_west2005,gabaix_maggiori2015,lustig_etal2011}. If these macroeconomic variables affect the investment opportunities that investors face, then excess returns should comove with unexpected changes in these state variables \citep{merton1973}. If investors have little information about the dynamics of the true data generating process dictating the evolution of both asset returns and state variables, then uncertainty over future macroeconomic conditions should be priced in the cross-section of excess returns \citep[e.g.,][]{anderson_etal2009,Bali:2014}. Motivated by these insights, we investigate empirically whether macro uncertainty matters in the cross-section of currency excess returns.
+
+% Let see how it works
+
+While the concept ALEKS of uncertainty is well grounded -- an event is uncertain when both the outcome and its distribution are unknown -- in practise it remains difficult to measure as individuals' subjective beliefs are not directly observable \citep[e.g.,][]{Bloom:2014}.\footnote{While measures of option-implied volatility are often used as indicators of uncertainty, their information content may also reflect other components and, thus, provide a biased measure of economic uncertainty. \citet{Bekaert/Hoerova/LoDuca:2013} find that a large component of the VIX index is driven by factors associated with time-varying risk aversion whereas \citet{dellacorte_etal2014} report evidence that volatility risk premia in foreign exchange markets reflects the costs of insuring against currency volatility fluctuations.} Despite being in its early stage, a growing literature quantifies macro uncertainty using the cross-sectional dispersion in economic forecasts as they are likely to reflect changing economic circumstances agents are exposed to \citep[e.g.,][]{beber_etal2010,Bloom2009,Bomberger:1996,Zarnowitz/Lambros:1987}. It can also be viewed as a model-free measure as forecasts are observable and, thus, its construction does not require estimating any specific models. Using a standard decomposition of forecast errors into a common and idiosyncratic shocks, \citet{lahiri_sheng2010} show that uncertainty is simply the disagreement among forecasters plus the variability of future aggregate shocks that accumulate over forecast horizons.
+
+We quantify macro uncertainty using measures of cross-sectional dispersion of economic forecasts collected from \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts} -- to our knowledge, the most comprehensive and long-dated international surveys of monthly expectations for both developed and emerging market countries. Armed with these economic forecasts, we first construct cross-sectional dispersions for each country, and then average across all available countries to measure the systematic component. Ultimately, we obtain five indicators of global uncertainty for current account, inflation rate, short-term interest rate, real economic growth, and foreign exchange rate from each survey of market participants' expectations. In our exercise, we work with one-year ahead economic forecasts collected every month. This implicit overlapping structure generates a strong predictable component in our monthly measures of macro uncertainty which we remove by computing unexpected changes (or innovations) via a simple autoregressive model. The resulting standardized residuals can be viewed as measures of macro uncertainty shocks. We further consider a broad index of global economic uncertainty shocks that captures the common variation across our measures of global macro uncertainty. We construct this index for each survey as in \citet{Bali:2014} by means of principal component analysis.
+
+We evaluate the sensitivity of currency excess returns to our measures of macro uncertainty using a standard linear asset pricing framework. The link between excess returns and macro uncertainty can be rationalized using the intertemporal capital asset pricing model of \citet{merton1973} as in \citet{Bali:2014} who investigate hedge fund and mutual fund exposure to measures of macro uncertainty, and \citet{Bali:2015} who examine individual stock return exposure to a broad measure of economic uncertainty. Moreover, \citet{anderson_etal2009} expand the general equilibrium model of \citet{merton1973} and decompose excess returns into risk and uncertainty, thus augmenting the traditional risk-return relation with the uncertainty-return tradeoff. Risk is identified with the asset return volatility whereas uncertainty is based on aggregate disagreement amongst professional forecasters. In this model, uncertainty arise from the fact that investors have little knowledge about both the mean of the asset return and the mean of the state variable. Intuitively, when forecasters provide very different predictions about future economic fundamentals, we should then expect that market participants are unsure about the mean of asset prices and state variables dynamics, and thus uncertainty is high. In contrast, when forecast dispersion is low, it is likely that forecasters tend to agree about future economic fundamentals and hence uncertainty is low. Consistent with this literature,  we examine the exposure of currency excess returns to both uncertainty arising from the mean of the exchange rate return process and uncertainty stemming from the evolution of the economic state variables, i.e. current account, inflation rate, short-term interest rate and real economic growth.\footnote{In the empirical analysis, \citet{anderson_etal2009} consider a restricted version of their model and focus only on uncertainty in mean returns. In contrast, our dataset allows us to consider both sources of uncertainty.} We then use standard asset pricing methods to assess whether currency excess returns can be understood as compensation for macro uncertainty, and if so, whether uncertainty originates from the exchange rate return process or the evolution of the economic state variable, or both.
+
+To preview our results, we find strong empirical evidence that high-yielding currencies are negatively correlated to innovations in current account uncertainty, and thus offer low returns when uncertainty on future current account positions is unexpectedly high. In contrast, currencies with low interest rates display a positive relationship with our measure of current account uncertainty, and hence provide a hedge by yielding positive excess returns when current account uncertainty is unexpectedly high. Our results hold for a broad sample of currencies for the period from 1993 to 2013, and are consistent for both \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts} data. In contrast, the broad measure of uncertainty as well as uncertainty over short-term interest rate, inflation rate, real economic growth, and exchange rate display no significant relation with the cross-section of currency excess returns. In short, we document that our proxy of global current account uncertainty is the more powerful macro uncertainty factor in explaining the cross-section of currency excess returns, and it subsumes the information contained in both foreign exchange global volatility factor and other measures of global macro uncertainty.\footnote{In a related paper, \citet{beber_etal2010} construct measures of exchange rate disagreement for three currency pairs and use them to explain the level of implied volatility of currency options as well as the underlying exchange rate returns.}
+
+Our empirical results support the recent theoretical contributions of \citet{gourinchas_rey2007} and \citet{gabaix_maggiori2015}. \citet{gourinchas_rey2007} show that a deterioration in the external account of a country is unsustainable over time unless counterbalanced by future trade surpluses and/or positive returns on the net foreign asset position.  Currency fluctuations are key to this process of external adjustment as a domestic currency depreciation affects the country's international competitiveness in goods and services, as well as the value of its foreign assets and liabilities. \citet{gabaix_maggiori2015} build on this literature and suggest a novel theory of exchange rate determination based on capital flows in imperfect financial markets. They propose a two-country model in which currency excess returns are jointly determined by global imbalances and financiers' risk-bearing capacity. Countries run trade imbalances and financiers absorb the resultant currency risk, i.e. they are long the debtor country and short the creditor country. Financiers, however, are financially constrained, and this affects their ability to take positions. Intuitively, when there is little risk-bearing capacity they are unwilling to intermediate currency mismatches regardless of the excess return on offer. In contrast, when financiers have unlimited risk-bearing capacity they are willing to take positions in currencies whenever a positive excess return is available, and hence uncovered interest rate parity holds.
+
+We link this line of research to a recent literature that studies the impact of trade finance on international economy. \citet{chor_manova2012} show that external financing shocks have an impact on firms' international trade. More specifically, \citet{amiti_weinstein2011} and \citet{niepmann_schmidt2014b} suggest supply shocks to banks' trade finance have a non-negligible effect on trade. When financing by banks suddenly decreases, firms can either switch to non-intermediated international trade (through cash-in-advance or open-account transactions) or decrease trade with international counterparties outright. Because any choice between the two extremes -- completely unaffected trade and no trade -- is now possible, uncertainty about the international trade rises. This is what could be captured by forecast dispersion on the current account. Here, current account uncertainty could be seen as an indicator that reflects the change in the ability of the financial sector to bear risk which then translates into higher currency premia. Nonetheless, while this story is plausible, the causality might run the other way around -- current account uncertainty itself increases financial sector risk aversion, especially in the context of international exposures, which makes it more costly for a country to maintain negative external positions and facing higher premia demanded for holding its issued currency.
+
+%AK: work in progress
+There is considerable amount of literature on the effect of uncertainty on liquidity. Theoretical contributions include e.g. \citet{routledge_zin2009} and \citet{easley_ohara2010} who state that market liquidity generally dries up in the presence of uncertainty. \citet{battalio_schultz2011} claim empirical support for the fact that increases in regulatory uncertainty (tied to restrictions on short-selling) decrease liquidity in the equity options market. Finally, \citet{chung_chuwonganant2014} conclude that VIX -- which they interpret as aggregate market uncertainty -- is able to explain the dynamics of the liquidity in individual stocks. Therefore, a case could be made that both our forecast dispersion measures as well as VIX are affecting the currency market through the effect on either funding or market liquidity, which makes the liquidity a finer pricing factor. However, we do not find evidence for the liquidity channel. Because funding liquidity and market liquidity are likely to be endogenously related \citep{brunnermeier_pedersen2009} we work with a proxy for each of the two liquidity aspects. We proxy funding liquidity by the TED spread measure [? avg. of USD, EUR, JPY] while market liquidity is calculated as in \citet{karnaukh_etal2015}. [summary of empirical results]. Hence, it does not seem that liquidity channel is at play in the explanation of currency unconditional mean returns. Such evidence is consistent with and complementary to the empirical exercises of \citet{menkhoff_etal2012} who consider bid-ask spread, TED spread, and the liquidity measure by \citet{pastor_stambaugh2003} and notice that information in those variables is spanned by FX volatility shocks.
+
+Our paper builds on a recent literature seeking for a risk-based explanation of currency carry trade in a cross-sectional asset pricing setting. \citet{lustig_etal2011} and \citet{menkhoff_etal2012} report evidence that currency excess returns can be thought of as compensation for exposure to a global risk factor. \citet{lustig_etal2011} rationalize returns to carry trade using a data-driven approach in line with the Arbitrage Pricing Theory of \citet{Ross:76}. They identify two risk factors: the average excess return on a basket of currencies against the US dollar and the excess return to the carry trade portfolio itself. \citet{menkhoff_etal2012} replace the carry factor with innovations to global foreign exchange volatility and find that in times of high unexpected volatility, high-interest currencies deliver low returns, whereas low-interest currencies perform well. While these global risk factors provide valuable information on the properties of currency returns, they leave unanswered the question on what economic fundamental forces drive the factors and, hence, currency risk premia. This paper can be considered as attempt to shed light empirically on the primitive economic determinants of currency excess returns.\footnote{Other papers studying carry trade returns include \citet{brunnermeier_etal2009}, \citet{cc:2013}, \citet{farhi_etal2015}, \citet{hassan_mano2015}, \citet{jurek2014},  \citet{lettau_etal2014}, \citet{mueller_etal2015}, and \citet{mancini_etal2013}.}
+
+In our empirical analysis, we follow much for the existing literature and construct currency excess returns sorted on forward discounts as test assets  \citep{lustig_verdelhan2007,lustig_etal2011}. We start our asset pricing exercise using individual currency excess returns as test assets before moving to traditional currency-sorted portfolios. Working with country-level excess returns brings the advantage of having a large cross-section. This is important as the linear asset pricing framework used in this paper implies a pricing kernel with multiple factors. Meanwhile, we can address at the outset any concerns stemming from the practice of grouping assets into portfolios as pointed out by a recent literature \citep[e.g.,][]{lewellenetal:10-jfe,ALS/2010}. In our setup, we first define a two-factor pricing kernel with the dollar factor and in turn each global measure of macro uncertainty shocks. Note that the dollar factor displays no cross-sectional relation with currency returns, and it works as a constant that captures the common mispricing in the cross-section of currency returns \citep{lustig_etal2011}. This exercise is performed to check whether macro uncertainty bears a premium in the cross-section of currency excess returns. Second, we control for volatility risk by adding the foreign exchange volatility innovations of \citet{menkhoff_etal2012} to our pricing kernel. With this exercise, we attempt to understand whether there is a macro uncertainty premium that is distinct with respect to the traditional volatility risk premium or whether the latter subsumes the information content embedded in the various measures of macro uncertainty. Thirdly, we run a horse race analysis that involves having all measures of macro uncertainty shocks stacked together in our pricing kernel. We execute this exercise to discriminate among our measures of uncertainty and, thus, understand whether the uncertainty premium can be attributed to a specific macroeconomic force, or whether it is common to all macroeconomic indicators. Finally, we move to sorting currencies into six portfolios according to their forward discounts as pioneered by \citet{lustig_verdelhan2007}. The first portfolio contains the funding currencies of a carry trade strategy (low-yielding currencies relative to the US dollar) while the last portfolio contains the investment currencies in a carry trade strategy (high-yielding currencies relative to the US dollar). This exercise, which we run as a robustness check, confirms that carry trade returns can be understood as compensation for exposure to current account uncertainty.
+
+% AK: we need to hugely expand this part on idea and motivate what gap is there in lit and how we fill it
+To summarize, the main contribution of this paper relative to existing research is twofold. First, we show that current account uncertainty is an important determinant of risk premia in the cross section of carry trade returns. Second, among a set of competing economic indicators, we provide empirical evidence on the key economic channel through which uncertainty affects currency premia. Our results corroborate the recent empirical evidence of \citet{dellacorte_etal2015} who show that global imbalances are an important driver of currency risk premia. Our findings are also in line with \citet{bachmann_etal2013} and \citet{gilchrist_etal2014} who point that the impact of uncertainty shocks on the economy is likely to come not through the real options channel but more likely through the financial frictions channel.
+
+The remainder of the paper is organized as follows. Section \ref{sec:motivation_UNC_CAR} provides in detail motivation for the empirical analysis of the paper in relation to the current literature. Section \ref{sec:data_UNC_CAR} describes the surveys of market participants' expectations on macroeconomic indicators, whereas Section \ref{sec:prelim_analysis_UNC_CAR} provides details on the construction of our measures of forecast dispersions and shows that they can be thought of as proxy for uncertainty. We then present asset pricing tests in Section \ref{sec:ap_individual_UNC_CAR} using country-level excess returns and in Section \ref{sec:ap_portfolio_UNC_CAR} using portfolio-level excess returns, before concluding in Section \ref{sec:conclusion_UNC_CAR}.
+
+\section{Macro uncertainty and excess returns} \label{sec:motivation_UNC_CAR}
+A recent literature provides evidence that foreign exchange investors receive compensation for bearing global risk. Understanding the economic sources of this systematic component has received to date little empirical research. Our paper takes a step into this direction and studies whether macro uncertainty is informative about the cross-sectional properties of currency excess returns. We view this exercise as an attempt to directly link currency excess returns to quantitative measures of economic primitives, measured by the cross-sectional dispersion of market participants' expectations on a variety of fundamental economic variables.
+
+The role of macro uncertainty has been empirically studied in a recent paper by \citet{Bali:2015} who relate a broad index of economic uncertainty to the cross section of individual stock returns. The paper constructs innovations to the cross-sectional forecast dispersion of a number of economic indicators from the Survey of Professional Forecasters and then uses the common component as a proxy for market uncertainty. The empirical evidence reveals the existence of a negative price of economic uncertainty that is distinct from the more traditional volatility risk in the cross-section of equity returns. The authors motivate this finding using the intertemporal hedging demand argument of \citet{merton1973} with macro uncertainty acting as a relevant state variable. In this setting, agents reduce their optimal consumption and investment demand in response to an increase in macro uncertainty. As they become more concerned about future outcomes, investors save more and acquire assets that have higher covariance with economic uncertainty in order to get insurance against possible future bad states of the world (associated with higher macro uncertainty). Through the intertemporal hedging demand, investors are thus willing to hold assets with higher covariance with economic uncertainty, pay higher prices and accept lower excess returns for those assets, since they can be viewed as hedging instruments against future negative shocks to investment opportunities. Consistent with \citet{Bali:2015}, we find a negative macro uncertainty premium that is distinct from the traditional negative foreign exchange volatility risk premium.% Moreover, we also provide empirical insights on whether uncertainty arises from a key economic force or largely from all macro economic forecasts.
+
+The link between excess returns and uncertainty is more explicit in the asset pricing model of \citet{anderson_etal2009} which builds on \citet{merton1973} and \citet{Hansen_Sargent:2001}, among many others. In this setting both risk and uncertainty matter for asset pricing when investors have the lack of knowledge about the probability law governing asset returns and state variables. Specifically, investors have full knowledge of the second moments of asset returns and state variables while they are worried about the mean of the asset returns and the mean of state variables process, which in turn affect the evolution of wealth. In equilibrium the excess return on each asset depends on both market risk and aggregate uncertainty, and the latter reflects uncertainty about the mean of the asset return and uncertainty about the mean of the state variable. In their analysis, \citet{anderson_etal2009} impose the restriction that aggregate uncertainty is unrelated to the uncertainty in the state variable. As pointed out by the authors, this assumption is primarily dictated by the availability of the data since they quantify uncertainty using the dispersion in predictions of aggregate corporate profits from the Survey of Professional Forecasters. In contrast, we have forecasts on a number of key economic determinants for exchange rate returns and, thus, we can relax such assumption.
+
+Our analysis is also related to the recent contribution of \citet{menkhoff_etal2012} who find a negative price of volatility risk in the cross section of carry trade assets. This happens as high interest rate currencies exhibit negative covariance with global foreign exchange volatility innovations, whereas low interest rate currencies provide a hedge against unexpectedly volatility spikes. Since a positive volatility innovation worsens the investor risk-return tradeoff, currency returns that are positively correlated with global volatility innovations are expected to offer a lower excess return as they provide an insurance against bad states of the world. While volatility innovations provide valuable information to understand the properties of currency excess returns, the question as to what fundamental economic forces could drive the factors and, hence, currency risk premia, remains unanswered. As \citet{menkhoff_etal2012} point out, volatility innovations are likely to capture shocks to state variables that are relevant to the evolution of the investors' investment opportunity set. In this context, our paper can be also seen as an attempt to shed light on the economic determinants of global volatility risk.
+
+% AK: at least \citet{kozhan_salmon2009} and perhaps also \citet{beber_etal2010} should be mentioned here
+
+Motivated by this literature, we use measures of uncertainty shocks over traditional macro variables as pricing factors within a linear asset pricing framework. As described in the data section, we source international forecasts on a number of economic fundamentals widely used in the exchange rate determination literature such as current account, inflation rate, short-term interest rate, real economic growth and exchange rate from \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts}. Uncertainty is measured as the cross-sectional forecast dispersion averaged across of a broad set of countries whereas unexpected shocks are computed by simply fitting a simple autoregressive model as in \citet{menkhoff_etal2012}.
+
+\section{Data description} \label{sec:data_UNC_CAR}
+This section describes two leading cross-country surveys -- \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts} -- of market participants' expectations on economic indicators and prices which we refer to as macro variables. We also describe data on exchange rates as well as other data used in our empirical analysis.
+
+\paragraph{Data on macro forecasts.}
+We have assembled a unique dataset of monthly forecasts running from July 1993 to July 2013 on five international economic indicators and prices: current account (\emph{ca}), inflation rate (\emph{if}), short-term interest rate (\emph{ir}),  real economic growth (\emph{rg}), and foreign exchange rate (\emph{fx}). We have obtained these forecasts from two distinct surveys of market participants' expectations, namely \emph{Blue Chip Economic Indicators} published by Aspen Publishers and \emph{Consensus Forecasts} compiled by Consensus Economics. We have collected manually most of these data using the original paper archives made available by Wolters Kluwert and Consensus Economics, respectively. The resulting dataset of digitized forecasts represents an important source of information to examine whether macro uncertainty matters in the cross-section of currency excess returns. Below we describe the surveys used in our empirical analysis. %\footnote{Other data sets of economic forecasts include the Survey of Professional Forecasters and the Livingstone Survey (in the United States), the European Central Bank's Survey of Professional Forecasters, the Bank of England's Survey of External Forecasters, the Survey of Japanese Professional Forecasters, and FocusEconomics. These surveys, however, cover only a single country or economic region, a subset of economic indicators, lower frequency forecasts (typically quarterly) or a shorter time period.}
+
+The \emph{Blue Chip Economic Indicators} survey is conducted among economists working at financial institutions, corporations, professional forecast firms, and academic institutions.\footnote{We are comfortable with the fact that forecasters are not restricted to banks' research teams -- \citet{anderson_etal2005} and \citet{kim_zapatero2011} caution that financial analysts might not represent a random sample from the population of investors. If that was the case, macro uncertainty proxies, and more importantly their dynamics, through forecast dispersions could be significantly distorted. By using a broader set of economists coming from various institutions we can alleviate this problem.} It contains international macro forecasts for up to 20 major trading partners of the United States, that are, Australia, Belgium, Brazil, Canada, China, Euro area, France, Germany, Hong Kong, India, Italy, Japan, Mexico, Netherlands, Russia, Singapore, South Korea, Switzerland, Taiwan, and United Kingdom. We remove the Eurozone countries after the introduction of the Euro in January 1999 and replace them with the Euro area. The survey is carried out near the beginning of the month as the participants submit their forecasts on the first or the second business day of each month. While forecasts are collected at individual level, the published data are for the top (3 average) and the bottom (3 average) forecasts. From July 1993, when the survey started, and until May 1995, data are only available for the top (high) and bottom (low) forecasts.
+
+The second international survey is \emph{Consensus Forecasts} which is carried out monthly among experts from a large number of financial and economic institutions.\footnote{This data covers a wide range of international macroeconomic indicators. In our empirical analysis, we only consider the cross-sectional dispersion of forecasts on the five indicators described at the beginning of this section in order to match the sample of data collected from \emph{Blue Chip Economic Indicators}. The Internet Appendix shows that additional variables do not change the conclusion of our study.} We use forecasts for up to 46 countries organized in regional volumes (G7-Western Europe, Asia Pacific, Latin America and Eastern Europe) and comprising Argentina, Australia, Brazil, Bulgaria, Canada, Chile, China, Colombia, Croatia, Czech Republic, Estonia, Euro area, France, Germany, Hong Kong, Hungary, India, Indonesia, Italy, Japan, Latvia, Lithuania, Malaysia, Mexico, Netherlands, New Zealand, Norway, Peru, Philippines, Poland, Romania, Russia, Singapore, Slovakia, Slovenia, South Korea, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, Ukraine, United Kingdom, United States, and Venezuela. After the introduction of the Euro in January 1999, we replace the Eurozone countries  with the Euro area. We exclude an additional number of 39 countries as the survey only reports the consensus (mean) forecasts and not the cross-sectional distribution of forecasts. For the G7-Western Europe and Asia Pacific countries, the survey is conducted on the second Monday of the month whereas for Latin American and Eastern European economies forecasts are collected on the third Monday of the month and then sent to the subscribers the following Thursday. In contrast to \emph{Blue Chip Economic Indicators}, \emph{Consensus Forecasts} reports international forecasts at panelist level.% We track the series of each forecaster as their institutions merged with others, were dropped or renamed.
+\footnote{Foreign exchange rate forecasts are only available for top (high) and bottom (low) forecasts starting from January 1995.}
+
+%AK: WHY YOU REMOVED FOOTNOTE BELOW?
+%\footnote{\emph{Consensus Forecasts} has published international forecasts since October 1989 for a wide range of economic and financial variables. In our core analysis, we only use data starting from July 1993 for \emph{ca}, \emph{if}, \emph{ir}, \emph{rg}, and \emph{fx} in order to match the sample collected from \emph{Blue Chip Economic Indicators}. We checked that using (i) data from 1989, and (ii) the additional indicators covered by \emph{Consensus Forecasts} does not change qualitatively the conclusion of our study.}
+
+% P: NO UPSIDE FROM THIS FOOTNOTE. AK: OK, PASQUALE CONVINCED (LET COMMENT STAY FOR NOW):
+%\footnote{All time span falls well post Bretton-Woods fixed exchange rate system as desirable (\citet{engel_west2010}). Only after 1979 can one fully consider risk premium as the driver of FX dynamics which is also shown empirically in \citet{sarno_schmeling2012}.}
+
+Before running the empirical analysis, we have cleaned and transformed the data as follows. % For \emph{Blue Chip Economic Indicators} we have removed few data when the bottom forecast was larger than the top forecast whereas for \emph{Consensus Forecasts} we have excluded few individual forecasts that were substantially different from other forecasts.\footnote{In a number of cases, the data provider kindly helped us identify and fix outliers likely due to typing errors by respondents. We have also experimented with a $99\%$ winsorization but results remain qualitatively identical.}  When a single observation was missing, we have linearly interpolated the available adjacent monthly observations. Moreover, 
+While forecasts on \emph{if}, \emph{ir} and \emph{rg} are reported as year-on-year (yoy) percentage change, forecasts on \emph{ca} and \emph{fx} are measured in levels. We make them comparable across countries by scaling the forecasts on \emph{ca} with respect to the end of previous year annual gross domestic product (IMF estimates) and the forecasts on \emph{fx} with respect to the end of previous year spot exchange rate.
+
+\paragraph{Constant maturity forecasts.}
+Every month \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts} collect from respondents expectations for the end of the current calendar year and expectations for the end of the next calendar year. For instance, in April 2001 Ford Motor Company submitted a real economic growth forecast for the end of $2001$ ($9$ months ahead) and the end of 2002 ($21$ months ahead). Since these forecasts are formed on a moving forecast horizon, their cross-sectional dispersion is strongly seasonal (uncertainty about the realization of the underlying variable is resolved through time as the forecasting horizon decreases). Instead of using these fixed-event forecasts, we utilize a simple linear interpolation method to compute fixed-horizon forecasts \citep[e.g.,][]{DFS_2012,buraschi_whelan2012}. In every month $t$, we construct a one-year constant maturity forecast $f_{t}$ as a weighted average of year-end forecasts as follows
+\begin{equation} \label{eq:fcst1y}
+f_{t} = \frac{n}{12} f_{t+n|t} +  \frac{12-n}{12} f_{t+12+n|t}
+\end{equation}
+where  $f_{t+n|t}$ is the forecast for the end of the current calendar year ($n$ months ahead) available at time $t$, $f_{t+12+n|t}$ is the forecast for the end of the next calendar year ($12+n$ months  ahead) available in month $t$, and $1\leq n\leq 12$. For instance, the one-year constant maturity forecast in April $2001$ is constructed as a weighted average of a $9$-month ahead forecast and $21$-month forecast where $n=9$. We will employ these one-year constant maturity forecasts to construct measures of forecast dispersion which are then related to the cross-section of currency excess returns.
+
+%AK: WHY YOU REMOVED FOOTNOTE BELOW?
+%\footnote{The 1-year constant maturity forecast estimates are often used among investment banks working with survey data.}
+
+% AK: (LET COMMENT STAY FOR NOW):
+% Thus, we implicitly assume that in \emph{Blue Chip Economic Indicators} survey the same entities which provide top (bottom) 3 short term forecasts also appear in the top (bottom) 3 for long term forecasts.
+
+\paragraph{Forecast formation dates.}
+We largely know the submission dates of forecasts, but we need to take a stand on when they are formed. %AK: At this point I think it is important to expand: e.g. mention the concept ``staleness'' and provide some literature refs that mention it. Otherwise people might ask why we don't think the forecasts is a continuous process and submission date is the one to be taken in the base case, i.e. - why should there be a lag between formation date and submission date? We need to motivate our base case, even though we do robustness. Your attempt was not successful and confused me
+% Since a forecast may become stale when new information enters the market, 
+We assume that forecasts are formed on the day prior to the submission date, i.e. on the business day prior to the first business day of each month for \emph{Blue Chip Economic Indicators}, and on the business day prior to the second Monday of each month for \emph{Consensus Forecasts}. For instance, the forecasts submitted to \emph{Blue Chip Economic Indicators} at the beginning of April 2001 are thought as of forecasts formed at the end of March 2001.%AK: end of March 2001 was saturday :) 
+Similarly, the forecasts submitted to the \emph{Consensus Forecasts} survey on the $9^{th}$ of April 2001 are used as macro forecasts formed on the $6^{th}$ of April 2001.\footnote{Latin American and Eastern European countries' forecasts are submitted on the third Monday of the month. We will treat them as the G7-Western Europe and Asia Pacific countries' forecasts (i.e. we assume that they are formed on the business day prior to the second Monday of each month).}
+
+\paragraph{Exchange rates and excess returns.}
+We collect daily data from July 1993 to July 2013 on spot and 1-month forward exchange rates vis-\`{a}-vis the US dollar (USD) from Barclays and Reuters via Datastream. Our sample comprises 48 countries as in \citet{menkhoff_etal2012}: Australia, Austria, Belgium, Brazil, Bulgaria, Canada, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Euro area, Finland, France, Germany, Greece, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Israel, Italy, Japan, Kuwait, Malaysia, Mexico, Netherlands, New Zealand, Norway, Philippines, Poland, Portugal, Russia, Saudi Arabia, Singapore, Slovakia, Slovenia, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, Thailand, Ukraine, and United Kingdom. After the introduction of the Euro in January 1999, we remove the data for individual Eurozone countries and replace them with the Euro. As in \citet{lustig_etal2011}, we remove data when we observe large deviations from the covered interest rate parity condition.
+
+We define spot and forward exchange rates at time $t$ as $S_t$ and $F_t$, respectively, and sample them on the forecast formation dates described in the previous section.\footnote{As a check, we also account for the standard value date conventions in matching the forward rate with the appropriate spot rate \citep[e.g.,][]{bekaert/hodrick:93} but results remain qualitatively identical.} As robustness, however, we will also sample exchange rates on different dates -- up to a 5 business days before and 5 business days after the default formation dates -- and show that results remain qualitatively identical. Exchange rates are defined as units of US dollars per unit of foreign currency such that an increase in $S_t$ indicates an appreciation of the foreign currency. We construct currency excess returns adjusted for transaction costs using bid-ask quotes. The net excess return from buying foreign currency for a month is computed as $RX_{t+1}^{l}\simeq (S_{t+1}^{b}-F_{t}^{a})/S_{t}^{a}$, where $a$ indicates the ask price, $b$ the bid price, and $l$ a long position in a foreign currency. If the investor buys foreign currency at time $t$ but decides to maintain the position at time $t+1$, the net excess return is computed as $RX_{t+1}^{l}\simeq (S_{t+1}-F_{t}^{a})/S_{t}^{a}$. Similarly, if the investor closes the position in foreign currency at time $t+1$ already existing at time $t$, the net excess return is defined as $RX_{t+1}^{l}\simeq (S_{t+1}^{b}-F_{t})/S_{t}^{b}$. The net excess return from selling foreign currency for a month is computed as $RX_{t+1}^{s}\simeq(F_{t}^{b}-S_{t+1}^{a})/S_{t}^{b}$, where $s$ stands for a short position on a foreign currency. If the foreign currency leaves the strategy at time $t$ and the short position is rolled over at time $t+1$, the net excess return is computed as $RX_{t+1}^{s}\simeq (F_{t}^{b}-S_{t+1})/S_{t}^{b}$. Similarly, if the investor closes a short position on the foreign currency at time $t+1$ already existing at time $t$, the net excess return is computed as $RX_{t+1}^{s}\simeq (F_{t}-S_{t+1}^{a})/S_{t}^{b}$.
+
+%\paragraph{Data on external imbalances.} TBA
+
+%\paragraph{Data on implied volatility.} TBA
+
+\section{Macro uncertainty and forecast dispersion} \label{sec:prelim_analysis_UNC_CAR}
+This section describes first the construction of the cross-sectional dispersion in economic forecasts and then shows, that forecast dispersion and uncertainty are tightly linked, both analytically and empirically.
+
+\paragraph{Dispersion in macro forecasts.}
+We proxy uncertainty over macroeconomic indicators using the dispersion of market participants' expectations. To formalize our notation, let $f_{m,t}^{i,k}$ be the one-year forecast on the macro variable $m$ for the country $k$ formed by the agent $i$ at time $t$. Every month $t$, we construct the cross-sectional standard deviation for each country $k$ and each macro variable $m$ as follows
+\begin{equation} \label{eq:std_country}
+u_{m,t}^{k} = \sqrt{ \displaystyle \frac{1}{N_t} \sum_{i=1}^{N_t} \Bigg[ f_{m,t}^{i,k}- f_{m,t}^{k} \Bigg]^2}
+\end{equation}
+where $N_t$ is the number of forecasts on the macro variable $m$ available at time $t$ for the country $k$, and $f_{m,t}^{k}$ is the cross-sectional average of $f_{m,t}^{i,k}$. When data are only available for top and bottom forecasts for a particular series, we replace Equation (\ref{eq:std_country}) with a simple range-based measure in line with \citet{Bali:2014}. Denoting as $f_{m,t}^{h,k}$ and $f_{m,t}^{l,k}$ the top and bottom forecasts, respectively, we compute the range-based standard deviation of the forecasts at time $t$ for each country $k$ as
+\begin{equation} \label{eq:topbot_country}
+u_{m,t}^{k} =\sqrt{\ln \Bigg[ \frac{ 1 + f_{m,t}^{h,k} }{ 1 + f_{m,t}^{l,k}} \Bigg]}.
+% AK: IF QUESTION, SAY SQRT() WORKS SLIGHTLY BETTER (AND HAS BETTER STAT PROPERTIES) THAN SIMPLE RANGE
+\end{equation}
+Armed with these country-specific measures of macro forecast dispersion, we construct the global component in the spirit of \citet{buraschi_etal2014} and \citet{menkhoff_etal2012} by simply averaging across all countries $K_{t}$ available at time $t$
+\begin{equation} \label{eq:std_aggr}
+u_{m,t} =\frac{1}{K_{t}} \displaystyle \sum_{k=1}^{K_t} u_{m,t}^k,
+\end{equation}
+thus, measuring global uncertainty stemming from a variety of macroeconomic fundamentals such as current account, inflation rate, short-term interest rate, real economic growth and foreign exchange rate.
+
+\begin{center}
+	\textsc{Figure \ref{fig:aggregate_disagreement} about here}
+\end{center}
+
+We display our macro forecast dispersions, standardized to have zero means and unit variances for ease of comparison, in Figure \ref{fig:aggregate_disagreement} for both \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts}. The visual inspection reveals that our proxies of uncertainty on the same macro variable tend to move together despite our surveys (i.e. \emph{Blue Chip Economic Indicators} versus \emph{Consensus Forecasts}) do not cover the same set of countries, do not poll the same cohort of contributors, and have different submission dates with a difference of few weeks apart.\footnote{For \emph{Consensus Forecasts} we find very similar results when we compare standard deviation-based and range-based measures of macro uncertainty: the sample correlation is about $96\%$ for the current account, $89\%$ for the inflation rate, $75\%$ for the interest rate, and $98\%$ for the real economic growth. Recall that for foreign exchange rate forecasts, we only have top (high) and bottom (low) forecasts, and hence, our measure of uncertainty is computed using a range-based dispersion measure.} Moreover, our series are highly persistent as the first order serial correlation ranges from $0.64$ for global foreign exchange uncertainty (based on \emph{Blue Chip Economic Indicators} data) to $0.95$ for global real economic growth uncertainty (using \emph{Consensus Forecasts} data). This strong level of persistence is expected since we use forecasts with overlapping horizons (i.e. one-year forecast estimates sampled monthly).
+
+Finally, we observe different time-series behavior when moving across indicators. Uncertainty on monetary variables -- inflation and interest rates -- tends to trend down. This may reflect an increase in the credibility and transparency of central banks' monetary policy actions (e.g., the adoption of an explicit policy target) as well as an improvement in the policy communication \citep[e.g.,][]{bernanke_mishkin1997}. % Pasquale: THIS IS WRONG AS THERE IS A SPIKE IN IR
+%Moreover, recent unconventional policy actions in some countries seem to have put additional downward pressure on interest rate uncertainty by anchoring market participants' expectations more tightly around the policy path. 
+Real economic activity growth uncertainty, in contrast, displays a clear counter-cyclical pattern as it is low in normal times but high in periods of global economic recessions. Current account uncertainty instead tends to be low in first half of the sample and high in the second part of the sample. %Pasquale: THIS ARGUMENTS APPLY TO THE DYNAMICS OF IMBALANCES AND NOT TO VARIABILITY OF IMBALANCES
+%\footnote{If there is a macroeconomic variable which does not provide support for the great moderation hypothesis \citep[see][]{stock_watson2002} on the global scale, according to our uncertainty measures, it seems to be the nation's external balance position.} 
+This may manifest market participants' concerns regarding external imbalances sustainability that has been central to the economic debate over the last decade. Overall, the pattern reveals that current account uncertainty is likely to summarize information that is not contained in the global uncertainty measures on other macro variables. The dynamics of exchange rate uncertainty turns out to be mixed as we observe a spike during the Asian crisis and a persistent increase during the recent financial crisis.
+
+\paragraph{Relation between forecast dispersion and uncertainty.}
+To understand the unconditional relationship between forecast dispersion and uncertainty, consider the actual value $m_{t+1}$ of a variable of interest. This realized value can be written as the sum of an unbiased forecast and an orthogonal forecast error
+\begin{equation*}
+m_{t+1} = f^i_t + \eta_{t+1} + e^i_{t+1}
+\end{equation*}
+where $f^i_t$ is the forecast made by agent $i$ at time $t$. The forecast error comprises a component $\eta_{t+1}$ that is common to all forecasters and a component $e^i_{t+1}$ that is specific to the forecaster $i$. Forecast errors have zero means and are mutually uncorrelated \citep[e.g.,][]{lahiri_sheng2010,jurado_etal2015}.
+
+Uncertainty is generally measured as the average of agents' forecast errors variances. If forecasters share the same variance of their private forecast error, i.e, $var_t(e^i_{t+1}) = var_t(e_{t+1})$ for each agent $i$, then uncertainty can be expressed as
+\begin{equation*} %\label{eq:unc}
+u_{t} = \frac{1}{N_t} \sum_{i=1}^{N_t} var_t(\eta_{t+1} + e^i_{t+1}) = var_t(\eta_{t+1}) + var_t(e_{t+1}).
+\end{equation*}
+Forecast dispersion instead is based on the expected variance of agents' point forecasts. Assuming that private forecast errors have the same variance, \citet{lahiri_sheng2010} show that
+\begin{equation*}
+d_{t} = \frac{1}{N_t - 1} \sum_{i=1}^{N_t} E\big[ f_t^i - f_{t}\big]^{2} = \frac{1}{N_t} \sum_{i=1}^{N_t} var_t(e^i_{t+1}) = var_t(e_{t+1})
+\end{equation*}
+where $f_t$ is the cross-sectional average of $f_t^i$.
+
+These equations reveal that uncertainty equals forecast dispersion when there is no common component in forecast errors. When the condition is not satisfied but the conditional variance of $\eta_{t+1}$ is constant, then dispersion will be perfectly correlated with uncertainty. While this assumption may sound strong, \citet{bachmann_etal2013} and \citet{nimark2014} provide evidence that forecast dispersion and uncertainty are strongly correlated, thus suggesting that forecast dispersion is a natural metric to proxy uncertainty. Moreover, uncertainty constructed as the average of agents' forecast error variances depends on the realization of their forecast errors, which are \emph{ex post} quantities. In contrast, forecast dispersion can be thought of as an \emph{ex ante} proxy of uncertainty as it only relies on market participants' forecasts which are available before forecast errors are observed. %In our analysis, we study the link between currency excess returns and the information content of forecast dispersion based on a number of economic fundamentals. If the common shock affects all investors regardless of the variable of interest, then our analysis will be not affected. forecasts forecast error component $\eta_{t+1}$ is common to all investors and is
+
+\paragraph{Forecast dispersion as a proxy for uncertainty.}
+A recent literature suggests that higher information uncertainty leads to higher expected returns following good news and lower expected returns following bad news. This happens as information is slowly incorporated into prices. \citet{zhang2006} investigates this hypothesis using price momentum to distinguish good news from bad news, and a number of indicators such as dispersion in analyst earnings forecasts and stock market volatility to proxy for information uncertainty. Ultimately, greater information uncertainty should predict relatively lower future returns for past losers and relatively higher future returns for past winners. In his empirical evidence, he finds that the profitability of the momentum strategy that buys past winners and sells past losers is enhanced in periods of high uncertainty as opposed to periods of low uncertainty.
+
+Similarly to \citet{zhang2006}, we study the interaction between price momentum and information uncertainty in foreign exchange markets. We view this exercise as a preliminary check to understand whether our measures of macro forecast dispersion can be understood as proxies of information uncertainty. Each month, we sort currencies into three baskets using the past exchange rate returns from $t-1$ to $t$ as in \citet{menkhoff_etal2012b}. For each basket, we then sort currencies into two groups by means of information uncertainty level. To proxy for information uncertainty, we use country-specific measures of forecast dispersion on current account, inflation rate, short-term interest rate, real economic growth and foreign exchange rate as defined in Equations (\ref{eq:std_country})-(\ref{eq:topbot_country}). As additional measures of information uncertainty, we also use one-month foreign exchange implied volatilities from at-the-money currency options traded over-the-counter (\emph{iv}).
+
+\begin{center}
+	\textsc{Table \ref{tab:double_sorts_unc+price} about here}
+\end{center}
+
+Table \ref{tab:double_sorts_unc+price} presents the performance of currency momentum strategies when investors face periods of high and low  uncertainty, which we denote as $u_h$ and $u_l$, respectively. Panel A shows the interaction between price momentum and information uncertainty. Consider, for instance, the double sorted strategy when we measure uncertainty by means of current account dispersion. The excess return from a trading strategy with a long position in past winners and a short position in past losers is as high as $3.83\%$ ($3.72\%$) per annum in periods of high uncertainty and as low as $1.15\%$ ($1.51\%$) per annum in periods of low uncertainty when we use \emph{Blue Chip Economic Indicators} (\emph{Consensus Forecast}) data. The return differential $u_h-u_l$ between these momentum strategies is $2.68\%$ per annum for \emph{Blue Chip Economic Indicators}, and $2.21\%$ per annum for \emph{Consensus Forecast}. The return differential is generally positive but less pronounced when uncertainty is proxied by the additional macroeconomic forecast dispersions, and negative when implied volatilities act as a proxy of uncertainty.  Overall, we find that there is consistent evidence for the link between price momentum and information uncertainty when the latter is proxied by macroeconomic forecast dispersions as opposed to volatility measures.\footnote{Our results remain virtually unchanged if one uses 12-month currency option implied volatilities as well as model-free implied volatilities as in \citet{dellacorte_etal2014}.}
+
+In Panel B, we test the null hypothesis of equal return differentials $u_h-u_l$ for different proxies of uncertainty. The first column, for instance, reports the \emph{t}-statistics for the null hypotheses that $u_h-u_l$ for current account uncertainty is the same as $u_h-u_l$ based on other proxies of uncertainty. We reject the null hypothesis with a \emph{t}-statistic of $2.86$ ($1.99$) when we compare current account uncertainty to implied volatility for \emph{Blue Chip Economic Indicators} (\emph{Consensus Forecast}) data. In general, we fail to reject the null when we compare macro forecast dispersions, whereas we tend to reject the null when we compare macro forecast dispersions to foreign exchange implied volatility.
+
+Our results seem to suggest that our measures of macro forecast dispersion are likely to proxy for information uncertainty whereas implied volatility largely reflects other phenomena. This is consistent with \citet{Bekaert/Hoerova/LoDuca:2013} who find that option implied volatility is partly driven by factors associated with time-varying risk-aversion rather than economic uncertainty. In a similar vein, \citet{dellacorte_etal2014} find that volatility risk premia computed as difference between realized volatilities and currency option implied volatilities indicate the costs of insuring against currency volatility fluctuations. In sum, we construct currency portfolios sorted on past price momentum and different proxies of information uncertainty, and find empirically that macro forecast dispersions can be thought as proxies of information uncertainty. % RVOL IS GONE SIMPLY BECAUSE THE RESULTS WOULD NOT BE IN LINE WITH THE INTUITION THAT RVOL summarizes SHOCKS TO STATE VARIABLES
+
+\section{Country-level asset pricing}\label{sec:ap_individual_UNC_CAR}
+We start our cross-sectional asset pricing tests using individual currency excess returns as test assets and macro uncertainty shocks (or innovations) as non-traded pricing factors. While working with assets grouped into portfolios is popular in the literature as it improves the estimates of the time-series slope coefficients, it can dramatically influence the asset pricing results. \citet{LM/1990} show that forming portfolios of assets can potentially create data-snooping biases whereas \citet{lewellenetal:10-jfe} show that grouping assets into portfolios creates a strong factor structure whose consequence is that any factors weakly correlated with the characteristics used to sort the test portfolios will be able to explain the differences in average returns across them. More recently, \citet{ALS/2010} advocate the use of individual assets suggesting that the greater dispersion in the cross-section of factor loadings reduces the variability of the risk-premium estimator, i.e. forming portfolios can potentially destroy information by shrinking the dispersion of betas. By using individual returns, we will address at the outset the concerns highlighted by these recent literature. We will run traditional portfolio-level cross-sectional regressions in the next section.
+%Moreover, country-level returns allow to work with a large cross-section of assets and, thus, conduct horse race exercises among all macro uncertainty shocks in order to understand whether uncertainty stems from a specific macroeconomic force or is common to all macroeconomic indicators.
+
+\paragraph{Macro uncertainty shocks.}
+We use macro uncertainty shocks as non-traded pricing factors and denote them as $\Delta u_{m}$. Since the first differences of our forecast dispersion measures are significantly autocorrelated -- the first-order autocorrelation ranges from $-0.44$ to $-0.24$ for \emph{Blue Chip Economic Indicators}, and from $-0.30$ to $0.33$ for \emph{Consensus Forecasts} -- we estimate a univariate autoregressive process (AR) as in \citet{mancini_etal2013} and \citet{menkhoff_etal2012}, and then use the resulting innovations (with zero mean and unit standard deviation) as unexpected shocks to macro uncertainty. %AK: I actually like the fact how it was previously in a footnote: 
+%\footnote{We specifically fit a univariate autoregressive process with a constant and two lags determined according to the Box-Jenkins approach. Instead of using an optimal number of lags, we also experiment with 12 lags specification but results remain qualitatively identical. We standardize a shock to have a unit standard deviation (note that, by construction, it has also mean zero).}
+We include a constant and two lags in the AR model as determined by the Box-Jenkins methodology.\footnote{We also estimate a vector autoregressive process (VAR) with two lags but results remain qualitatively identical. Results are reported in the Internet Appendix} We report the correlation matrix of $\Delta u_{m}$ for both \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts} in Table \ref{tab:summary_global_disagreement}. We find that $\Delta u_{ca}$ is generally the least correlated with the other macro uncertainty shocks, thus suggesting that $\Delta u_{ca}$ is likely to reflect information that is not fully captured by other candidate pricing factors. In contrast, the highest level of correlation is observed for $\Delta u_{if}$ and $\Delta u_{rg}$ in both surveys.
+
+\begin{center}
+	\textsc{Table \ref{tab:summary_global_disagreement} about here}
+\end{center}
+
+Information uncertainty, however, may arise broadly from all macro forecast dispersions as opposed to be related to a specific economic force. We capture this common variation as in \citet{Bali:2015} by taking the first principal component of $\Delta u_{m}$ which we refer to as $\Delta u_{pc}$. Moreover, in the spirit of \citet{petkova:06}, we also orthogonalize our macro uncertainty shocks by projecting each $\Delta u_{m}$ onto the competing group of pricing factors
+\begin{equation}\label{eq:orth}
+\Delta u_{m,t}= a + \sum_{j \neq m} b_j \Delta u_{j,t} + \sigma_m \varepsilon_{m,t}.
+\end{equation}
+and then taking the standardized projection residuals, $\varepsilon_{m,t}$. By construction, the vector of residuals is uncorrelated with the right-hand side variables and contains information that cannot be explained by these group of candidate pricing measures. To keep the notation simple, we will continue to refer to orthogonalized shocks as $\Delta u_{m,t}$.
+
+\paragraph{Cross-sectional asset pricing tests.}
+For each currency $i$, we compute the excess return as $RX_{t}^{i}=\gamma_{t-1}^{i} \times (S_{t}^{i}-F_{t-1}^{i}) / S_{t-1}^{i} $, where $S_{t}^{i}$ and $F_{t}^{i}$ are the spot and one-month forward exchange rate, respectively, defined as units of US dollars per unit of foreign currency $i$, respectively, and $\gamma_{t}^{i}$ is an indicator function. We set $\gamma_{t}^{i} = 1$ when the forward discount $(S_{t}^{i}-F_{t}^{i})/S_{t}^{i}$ in deviation from its cross-sectional median is positive (the excess return originates from buying the foreign currency and selling the US dollar), and $\gamma_{t}^{i} = -1$ when the forward discount $(S_{t}^{i}-F_{t}^{i})/S_{t}^{i}$ in deviation from its cross-sectional median is negative (the excess return arises from selling the foreign currency and buying the US dollar). We thus obtain individual excess returns that are consistent with the popular dollar-neutral carry trade strategy \citep[e.g.,][]{lustig_etal2011}. We adjust the excess returns for the bid-ask spread as described in the data section, and express them in percentage per month.
+
+The literature in international finance typically employs a two-factor pricing kernel. The first factor is the expected market excess return approximated by the average excess return on a portfolio strategy that invest in foreign money markets with equal weights while borrowing in the US money market, generally referred to as $dol$ factor.
+As the second factor, we use the macro uncertainty shocks defined above. Since the set of currencies is unbalanced, we only report estimates of the factor prices and the cross-sectional $R^2$  obtained via \citet{fama_macbeth1973}-type procedure. In the first step, we run time series regressions of each country's $i$ excess return on a constant, and the factors $dol$ and $\Delta u_{m}$ as follows:
+\begin{equation}\label{eq:fmb1_UNC_CAR}
+RX_{t}^{i}= a^{i} + \beta_{dol}^{i} dol_{t} + \beta_{m}^{i} \Delta u_{m,t} + \varepsilon_{t}^{i}.
+\end{equation}%
+In the second step, we perform cross-sectional regressions of all currency excess returns on betas as
+\begin{equation}\label{eq:fmb2_UNC_CAR}
+RX_{t}^{i}= \beta_{dol}^{i}\lambda_{dol,t}  + \beta_{m}^{i}\lambda_{m,t}  + \alpha^{i}_t,
+\end{equation}
+and estimate $\lambda$ and $\alpha^{i}$ as the average of the cross-sectional regression estimates, i.e. $\widehat{\lambda}_{c} = T^{-1} \sum_{t=1}^{T} \widehat{\lambda}_{c,t}$ and $\widehat{\alpha}^{i} = T^{-1} \sum_{t=1}^{T} \widehat{\alpha}^{i}_{t}$. We add no constant in the second stage of \citet{fama_macbeth1973} regression as the $dol$ factor has no cross-sectional relation with currency returns, and it works as a constant that allows for a common mispricing \citep[e.g.,][]{lustig_etal2011,burnside2011}.
+
+\begin{center}
+	\textsc{Table \ref{tab:ap_individual} about here}
+\end{center}
+
+\emph{Panel A} of Table \ref{tab:ap_individual} presents cross-sectional asset pricing results for both \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts}. The dollar factor price, $\lambda_{dol}$, as expected, is never statistically different from zero. Turning to macro uncertainty shocks, the price is negative and highly statistically significant only for current account uncertainty shocks: $\lambda _{ca}$ ranges from $-0.64$ (with a robust \emph{t}-statistic of $-3.16$) for \emph{Blue Chip Economic Indicators} to $-0.51$ (with a robust \emph{t}-statistic of $-3.03$) for \emph{Consensus Forecasts}. The prices of additional macro uncertainty shocks -- inflation rate, short-term interest rate, real economic growth and foreign exchange rate -- show no sign of statistical significance. The cross-sectional $R^{2}$ for $\Delta u_{ca}$ tends to be reasonably high, $34\%$ for \emph{Blue Chip Economic Indicators} and  $36\%$ for \emph{Consensus Forecasts}, but lower than the $R^{2}$ typically uncovered for portfolio-based asset pricing tests. This is expected as individual excess returns are far more noisy than portfolio returns.
+
+Despite being intuitive and appealing, the Fama-MacBeth procedure employs pre-estimated betas in the second stage regression, and this requires an adjustment to the cross-sectional standard errors of the factor price estimates. \citet{shanken1992}, for instance, provides such a correction under the assumption of normally distributed errors. Since the residuals may exhibit heteroscedasticity and autocorrelation, we construct standard errors (and confidence regions) via the stationary bootstrap of \citet{politis/romano:94}. The exercise consists of 1,000 replications in which blocks with random length of individual currency excess returns and risk factor realizations are simulated with replacement from the original sample without imposing the model's restrictions. We provide full details on the bootstrap algorithm in the Appendix \ref{sec:bootstrap}. We report bolded factor prices when we detect statistical significance at $5\%$ (or lower) using our bootstrapped standard errors and confidence intervals. The estimates of $\lambda$ maintain their statistical significance for $\Delta u_{ca}$ across both surveys, thus confirming that currency excess returns can be thought of as compensation for exposure to current account uncertainty shocks. %We also address the errors-in-variable problems using two alternative ways. First, we estimate exposures with respect to observable first-differences in the state variables and find no qualitative changes. We report these results in the Internet Appendix. Second, we will sort currencies into portfolios and run traditional portfolio-level cross-sectional regressions. We will report this evidence in the next Section.
+
+\paragraph{Formation dates.}
+As described in Section \ref{sec:data_UNC_CAR}, we assume that forecasts are formed on the day prior to the submission date to mitigate the effect of stale forecasts. This means that $RX_{t}^{i}$ -- the monthly excess return for currency $i$ at time $t$ defined above -- is computed at the end of the month when we use use \emph{Blue Chip Economic Indicators}'s forecasts, and on the business day prior to the second Monday of the month when we employ \emph{Consensus Forecasts}'s forecasts.
+
+\begin{center}
+	\textsc{Figures \ref{fig:formation_dates_BC_managed} and \ref{fig:formation_dates_CS_managed} about here}
+\end{center}
+
+We now perform a simple exercise to show that our choice is not affecting the key results presented earlier. We sample individual excess returns up to five business days before (after) the default formation date and re-estimate the Fama-MacBeth regressions in Equations (\ref{eq:fmb1_UNC_CAR}) and (\ref{eq:fmb2_UNC_CAR}). In Figure \ref{fig:formation_dates_BC_managed}, we report the estimates of the factor price and the $95\%$ confidence interval based on Newey-West standard errors for \emph{Blue Chip Economic Indicators}' forecasts. The first panel displays the estimates of $\lambda_{ca}$ which remain negative and statistically significant up to four (two) days before (after) the default formation date. For the other macro uncertainty measures, we find no evidence that changing the formation date would enhance their statistical significance. In Figure \ref{fig:formation_dates_CS_managed}, we repeat the exercise for \emph{Consensus Forecasts}' data and conclusions remain largely the same. In particular, the estimates of $\lambda_{ca}$ remain negative and statistically significant up to four (five) days before (after) the default formation date.\footnote{Recall that \emph{Consensus Forecasts}' data for Latin American and Eastern European countries are submitted on the third Monday of the month, but we treat them for convenience as the G7-Western Europe and Asia Pacific countries' forecasts (submitted on the second Monday of the month). This could explain why $\lambda_{ca}$ remains statistical significant up to a week after the default formation date.} In contrast, we find no evidence of statistical significance for the competing macro uncertainty shocks. In brief, this exercise seems to suggest that our choice to define a monthly forecast formation date is not driving our key results.
+
+\paragraph{Horse race analysis.}
+The dispersion of analyst forecasts on current account may simply contain information already incorporated in other macro uncertainty indicators. \emph{Panel B} of Table \ref{tab:ap_individual} presents asset pricing tests with orthogonalized shocks as defined in Equation (\ref{eq:orth}) and find qualitatively identical results.  We report some evidence for real economic growth, but the sign of $\lambda$ is positive, is not in line with a risk-based explanation of currency excess returns, and is not robust to changes in empirical modelling. \emph{Panel C} of Table \ref{tab:ap_individual} runs a horse race exercise between current account and the competing pricing factors. Here we use orthogonalized uncertainty shocks as described in Equation (\ref{eq:orth}) only for current account. We find that information in $\Delta u_{ca}$ is different with respect to the information scattered in other macro uncertainty measures. The estimates of $\lambda_{ca}$  remain always negative and statistically significant ranging from $-0.78$ (with a \emph{t}-statistic of $-3.62$) to $-0.65$ (with a \emph{t}-statistic of $-3.08$) for \emph{Blue Chip Economic Indicators}, and from $-0.78$ (with a \emph{t}-statistic of $-3.91$) to $-0.68$ (with a \emph{t}-statistic of $-4.18$) for \emph{Consensus Forecasts}. Moreover, results remain consistent when we perform our bootstrap exercise.
+
+We also consider all measures of macro uncertainty shocks as pricing factors (with current account uncertainty shocks orthogonalized with respect to all other macro uncertainty shocks), and uncover the following Fama-MacBeth estimates:
+\begin{equation} \label{eq:all_bc}
+\widehat{E}[RX^{i}] =
+\underset{[0.86]}{0.12} \beta_{dol}^{i} -
+\underset{[-2.16]}{\textbf{0.49}} \beta_{ca}^{i} +
+\underset{[1.14]}{0.20} \beta_{if}^{i} -
+\underset{[-1.26]}{0.25} \beta_{ir}^{i} +
+\underset{[0.96]}{0.21} \beta_{rg}^{i} +
+\underset{[1.72]}{0.41} \beta_{fx}^{i}
+\end{equation}
+\begin{equation} \label{eq:all_cs}
+\widehat{E}[RX^{i}] =
+\underset{[0.94]}{0.13}  \beta_{dol}^{i} -
+\underset{[-4.64]}{\textbf{0.84}} \beta_{ca}^{i} +
+\underset{[0.18]}{0.03}  \beta_{if}^{i} +
+\underset{[1.75]}{0.20}  \beta_{ir}^{i} +
+\underset{[0.53]}{0.10}  \beta_{rg}^{i} +
+\underset{[0.14]}{0.04}  \beta_{fx}^{i}.
+\end{equation}
+where $\widehat{E}[RX^{i}]$ denotes the average excess return for currency $i$ predicted by the model whereas the $\beta$s are the slope estimates from the first-stage Fama-MacBeth regressions. We display \emph{t}-statistics based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag selection in brackets. In addition, we bold the factor prices when we find statistical significance at $5\%$ (or lower) using our bootstrap exercise. Equation (\ref{eq:all_bc}) refers to \emph{Blue Chip Economic Indicators} whereas Equation (\ref{eq:all_cs}) pertains to \emph{Consensus Forecasts} data. The estimate of $\lambda_{ca}$ is $-0.49$ on the former (with a \emph{t}-statistic of $-2.16$) and $-0.84$ on the latter survey (with a \emph{t}-statistic of $-4.64$), and confirms our findings on current account uncertainty.
+
+\begin{center}
+	\textsc{Figure \ref{fig:pricing_errors} about here}
+\end{center}
+
+We present the fit of the asset pricing models defined in Equations (\ref{eq:all_bc}) and (\ref{eq:all_cs}) in Figure \ref{fig:pricing_errors}.  We plot the actual average excess returns along the vertical axis, and the average predicted excess returns along the horizontal axis.  The symbols refer to the developed nations' currencies (solid circle), most liquid emerging market currencies (solid plus), and other countries's currencies (diamond).\footnote{The developed countries include Australia, Belgium, Canada, Denmark, Euro Area, France, Germany, Italy, Japan, Netherlands, New Zealand, Norway, Sweden, Switzerland, and the United Kingdom, whereas Brazil, Czech Republic, Hungary, South Korea, Mexico, Poland, Singapore, Turkey, Taiwan and South Africa denote the most liquid emerging market countries (see, for instance, the Deutsche Bank Global Currency Harvest Index).} The model-predicted excess returns lie very close to the $45$ degree line, suggesting that current account uncertainty shocks explain the spread in average excess returns reasonably well for most of the countries. The largest pricing errors are found for currencies that are pegged or subject to capital controls as for Brazil (BRL), Egypt (EGP), Indonesia (IDR), Ireland (IEP), Israel (ILS), and Slovenia (SIT). We also compute the average pricing error across all currencies $\alpha$ that turns out to be equal to $0.13\%$ per annum for \emph{Blue Chip Economic Indicators}, and to $0.46\%$ per annum for \emph{Consensus Forecasts}.
+
+\paragraph{Currency sub-samples.}
+Do illiquid or non-traded currencies drive our key result?  We address this question by considering two subsets of currencies. In the first subset, we use the financial openness index of \citet{chinn_ito/06} and remove from the test assets those countries that impose capital account restrictions and thus affect severely the actual trading of their currencies.\footnote{The data are available on Hiro Ito's website at yearly frequency. We construct monthly observations by forward filling, i.e. we keep end-of-period data constant until a new observation becomes available. Note that the Chinn-Ito index is not available for Taiwan. In this case, we rely on the capital account liberalization index of \citet{KS/2008}, available on Graciela Kaminsky's website.} In the second subset, we employ the exchange rate classification index of \citet{IRR/2011} and retain only floating and quasi-floating currencies as test assets.\footnote{The data are available on Ethan Ilzetzki's website at monthly frequency until the end of 2010. We extend the sample to July 2013 by forward filling.}
+
+\begin{center}
+	\textsc{Table \ref{tab:ap_individual_liquid} about here}
+\end{center}
+
+We report these asset pricing tests in Table \ref{tab:ap_individual_liquid}. In \emph{Panel A}, we keep time-\emph{t} country-level excess return when the openness index is greater than or equal to zero. In \emph{Panel B}, we keep time-\emph{t} country-level returns when the classification code ranges from 9 to 13. These regimes comprise currencies which are in a pre-announced crawling band that is wider than or equal to $+/-2\%$, a de facto crawling band that is narrower than or equal to $+/-2\%$, a moving band that is narrower than or equal to $+/-2\%$, a managed float, or a free float. As pricing factors, we use the same factors used in \emph{Panel B} of Table \ref{tab:ap_individual}. Overall, we find no qualitative change in our key empirical results as $\lambda_{ca}$ remains negative and highly statistically significant using either robust standard errors or bootstrapped confidence regions. The evidence brings to the same conclusion, that is, current account uncertainty is an important determinant of excess returns in foreign exchange markets.
+
+\paragraph{Controlling for volatility risk and policy uncertainty.}
+One may expect that market participants disagree more when volatility is high. This gives rise to larger forecast dispersions which in turn may be reflected in our measures of macro uncertainty. We control for volatility risk by augmenting our set of pricing factors with the global foreign exchange volatility innovations of \citet{menkhoff_etal2012}. We calculate the absolute daily exchange rate return for each currency in our sample, average across them, and then average daily values up to the monthly frequency such that $\sigma_{fx,t} = T_{t}^{-1}\sum_{\tau \in T_{t}}(\sum_{k\in K_{\tau}} |\Delta s^{k}_{\tau}|/K_{\tau})$, where $\Delta s^{k}_{\tau}$ is the daily log exchange rate return for currency $k$, $K_{\tau}$ denotes the number of available currencies on day $\tau$, and $T_t$ denotes the total number of trading days over the month prior to day $t$ (i.e. monthly observations are calculated on the forecast formation dates described in the data section). Finally, we fit an AR(1) process and use the resulting residuals (with zero mean and unit standard deviation) as volatility innovations $\Delta \sigma_{fx}$.
+
+\begin{center}
+	\textsc{Table \ref{tab:ap_individual_Bloom} about here}
+\end{center}
+
+We report these asset pricing tests in \emph{Panel A} of Table \ref{tab:ap_individual_Bloom}. Note that we use orthogonalized macro uncertainty shocks as defined in Equation (\ref{eq:orth}). The price stays negative and highly statistically significant across surveys only for current account uncertainty shocks: $\lambda_{ca}$ ranges from $-0.73$ (with a robust \emph{t}-statistic of $-3.60$) for \emph{Blue Chip Economic Indicators} to $-0.70$ (with a robust \emph{t}-statistic of $-4.23$) for \emph{Consensus Forecasts}. We also find some evidence for real economic growth uncertainty, but the sign of $\lambda$ is positive, is not in line with a risk-based explanation of currency excess returns, and is not robust to changes in empirical modelling.
+
+In addition to controlling for volatility risk, we also check for policy uncertainty as another potential driver of our results. When monetary and economic policies become more credible, macro indicators are easier to forecasts and market participants may disagree less about their future outcomes. In \emph{Panel B} of Table \ref{tab:ap_individual_Bloom}, we proxy for monetary policy uncertainty using the cross-country variations in policy interest rates. Following \citet{DFS_2012} and \citet{menkhoff_etal2012}, we average the absolute daily changes in the one-month interest rate across all currencies in our sample, and then average daily values up to the monthly frequency such that $u_{mp,t} = T_{t}^{-1}\sum_{\tau \in T_{t}}(\sum_{k\in K_{\tau}} |\Delta i^{k}_{\tau}|/K_{\tau})$, where $\Delta i^{k}_{\tau}$ is the daily change in the one-month interest rate for currency $k$.  In \emph{Panel C}, economic policy uncertainty is quantified by the news-based economic policy uncertainty measure of \citet{Baker/Bloom/Davis:2013}. We average daily values up to the monthly frequency such that $u_{ep,t} = T_{t}^{-1}\sum_{\tau \in T_{t}}u_{\tau}$, where $u_{\tau}$ is the economic policy uncertainty on day $\tau$.  We construct shocks by fitting univariate autoregressive processes and then taking the resulting (standardized) residuals. Overall, we find no change in our core results for both \emph{Blue Chip Economic Indicators} and \emph{Consensus Forecasts}.\footnote{Results remain largely comparable when macro uncertainty shocks are orthogonalized also against volatility risk and policy uncertainty innovations as the sample correlations tend to be low. For instance, across surveys, we find that $Corr(\Delta u_{ca}, \Delta \sigma_{fx})$ ranges between $5\%$ and $8\%$, $Corr(\Delta u_{ca}, \Delta u_{mp})$ between $0\%$ and $12\%$, and $Corr(\Delta u_{ca}, \Delta u_{mp})$ between $6\%$ and $11\%$.}
+
+We also control simultaneously for both volatility risk and policy uncertainty, and report (only for current account uncertainty to save space) the following Fama-MacBeth estimates
+\begin{equation} \label{eq:all_bc_unc}
+\widehat{E}[RX^{i}] =
+\underset{[0.89]}{0.11} \beta_{dol}^{i} -
+\underset{[-3.40]}{\textbf{0.65}} \beta_{ca}^{i} -
+\underset{[-0.49]}{0.06} \beta_{\sigma}^{i} +
+\underset{[1.33]}{0.25} \beta_{mp}^{i} +
+\underset{[0.07]}{0.01} \beta_{ep}^{i}.
+\end{equation}
+\begin{equation} \label{eq:all_cs_unc}
+\widehat{E}[RX^{i}] =
+\underset{[1.38]}{0.16}           \beta_{dol}^{i} -
+\underset{[-4.88]}{\textbf{0.85}} \beta_{ca}^{i} +
+\underset{[0.34]}{0.05}           \beta_{\sigma}^{i} +
+\underset{[1.19]}{0.26}           \beta_{mp}^{i} -
+\underset{[-0.65]}{0.12}          \beta_{ep}^{i}.
+\end{equation}
+where $\widehat{E}[RX^{i}]$ denotes the average excess return for currency $i$ predicted by the model whereas the $\beta$s are the slope estimates from the first-stage Fama-MacBeth regressions. We display \emph{t}-statistics based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag selection in brackets and bold the factor price when we find statistical significance at $5\%$ (or lower) using the bootstrapped confidence interval. Equation (\ref{eq:all_bc_unc}) refers to \emph{Blue Chip Economic Indicators} whereas Equation (\ref{eq:all_cs_unc}) pertains to \emph{Consensus Forecasts} data. The sign and the statistical significance of $\lambda_{ca}$ survives to this further robustness check.
+
+\paragraph{Additional robustness checks with country-level returns.}
+We examine our main results using a variety of additional specifications and find no qualitative changes of our findings. We report these additional results in the Internet Appendix: (i) we use the first difference of the macro uncertainty series rather than their AR-estimated innovations as pricing factors in Table \ref{tab:appendix_ap_individual_Changes}; (ii) we estimate a VAR with two lags to compute macro uncertainty innovations in Table \ref{tab:appendix_ap_individual_VAR}; (iii) (iv) we replace foreign exchange volatility innovations with VIX innovations and equity market uncertainty shocks in Table \ref{tab:appendix_ap_individual_VIX}; (iv) we employ simple long-short individual excess returns constructed by setting $\gamma_{t}^{i} = 1 (-1)$ when the forward discount is positive (negative) in Table \ref{tab:appendix_ap_individual}; (v) we proxy cross-sectional dispersion using a range-based estimator for \emph{Consensus Forecasts}'s data in Table \ref{tab:appendix_ap_individual_topbot}; and (vi) we run country-level asset pricing tests for additional economic indicators covered by \emph{Consensus Forecasts} in Table \ref{tab:appendix_ap_individual_CS_others}.
+
+\section{Asset pricing with portfolios} \label{sec:ap_portfolio_UNC_CAR}
+In this section, we run cross-sectional asset pricing tests using portfolio-level excess returns. The empirical results confirm that currency excess returns can be seen as a reward for bearing unexpected uncertainty shocks to external imbalances.
+
+\paragraph{Portfolio-level excess returns.}
+A number of recent papers construct portfolios excess returns by grouping currencies into baskets on the basis of their forward discounts (or equivalently, using the interest rate differential relative to the US dollar). We follow this literature and form six portfolios as in \citet{lustig_etal2011} and \citet{menkhoff_etal2012} using $t-1$ information such that the first portfolio ($P_1$) contains low-yielding currencies and the sixth and last portfolio ($P_6$) comprises high-yielding currencies. We refer to them as carry trade portfolios. Portfolios sorted on forward discounts, however, may not provide an exhaustive description of currency excess returns as the latter may depend not only on interest rate differentials but also on countries' external imbalances as \citet{gabaix_maggiori2015} show in a novel theory of exchange rate determination based on capital flows and imperfect financial markets. The authors show that currency excess returns are higher when interest rate differentials are larger and the investment (funding) currency's country is a net foreign debtor (creditor) economy. The model developed by \citet{gabaix_maggiori2015} assumes for tractability that each country borrows or lends in its own currency. In practice, a number of economies -- typically emerging market countries -- cannot issue all their external liabilities in domestic currency. \citet{gourinchas_rey2007}, \citet{gourinchas:2008} and \citet{lane_shambaugh:2010} consider the role of currency denomination of external liabilities in the process of re-equilibration of external imbalances showing that countries with a propensity to issue liabilities in foreign currencies should experience larger currency depreciations.
+
+\citet{dellacorte_etal2015} take these predictions to the data and construct portfolios sorted on $t-1$ information about countries' net foreign asset positions as percentage of the gross domestic product, and the percentage share of external liabilities denominated in foreign currency such that the first portfolio ($P_1$) contains the currency of the largest net creditor economies with the highest share of foreign liabilities denominated in domestic currency whereas the sixth and last portfolio ($P_6$) comprises the currency of the largest net debtor countries with the largest share of foreign liabilities denominated in foreign currency. More recently, \citet{colacito_etal2015} provide a unified theoretical framework using a frictionless risk-sharing model with recursive preferences that replicates the properties of the carry trade portfolios and the global imbalance portfolios.
+
+Consistent with this recent literature, we complement the carry trade portfolios with the global imbalance portfolios in order to fully characterize the cross-section of portfolio-based currency excess returns. We use $RX_t^j$ to denote the equally-weighted average of the individual currency excess returns falling within each portfolio $j$ in period $t$. We adjust excess returns for bid-ask spreads as described in the data section and express them in percentage per month. In particular, we assume that investors go short foreign currencies in the first portfolio and long foreign currencies in the remaining portfolios of each strategy.
+
+\paragraph{Asset pricing methods.}
+In the absence of arbitrage opportunities, the risk-adjusted expected excess return on each portfolio $j$ is zero, i.e. Euler equation holds:
+\begin{equation} \label{eq:Euler}
+	E[RX_{t}^j M_{t}]=0,
+\end{equation}
+with a linear stochastic discount factor (SDF) given by $M_{t}=1-(h_{t}-\mu)'b$, where $h_t$ denotes the vector of pricing factors, $b$ is the vector of factor loadings and $\mu$ denotes the factor means \citep[e.g.,][]{cochrane2005}. This specification implies the following beta pricing model:
+\begin{equation} \label{eq:beta_model_UNC_CAR}
+	E[RX_t^j]=\lambda'\beta^j
+\end{equation}
+where expected excess returns depend on factor prices $\lambda$ and risk quantities $\beta^j$, the regression coefficients of each portfolio $j$ excess returns on the risk factors. % The relationship between the factor prices in Equation (\ref{eq:beta_model_UNC_CAR}) and the factor loadings in equation (\ref{eq:Euler}) is given by $\lambda = \Sigma_h b$ with $\Sigma_h$ denoting the the covariance matrix of the factors. 
+We estimate the parameters of Equation (\ref{eq:Euler}) via the generalized method of moments (GMM) of \citet{hansen1982} with a prespecified weighting matrix. The factor means $\mu$ and the individual elements of $\Sigma_h$ are estimated jointly with the factor loadings $b$ by adding the corresponding moment conditions to those implied by the Euler equation. In this way we incorporate the potential uncertainty induced by the estimation of the means and the covariance matrix elements of the factors \citep[e.g.,][]{burnside2011,menkhoff_etal2012}. For more details on the estimation procedure consult the Appendix \ref{sec:GMM}.
+
+Asset pricing models only provide an approximation of reality, and their respective SDFs are misspecified proxies for the true unknown SDF. \citet{hansen/jagannathan:97} propose the minimum distance between the stochastic discount factor of an asset pricing model and the set of admissible SDFs as a natural measure of model misspecification, generally interpreted as the normalized maximum pricing error of the set of test assets. We construct the distance metric of \citet{hansen/jagannathan:97} by choosing the model's parameters $b$ such that $d_T (b) = $ $\sqrt{ min \hspace{0.1cm} g_T'(b)G_T^{-1}g_T(b)}$, where $g_T(b)$ is the vector of sample average of pricing errors and $G_T$ is the second moment matrix of the test asset returns.
+
+\paragraph{Asset pricing results.}
+Table \ref{tab:ap_portfolios_orth} reports GMM estimates of $b$ and implied $\lambda$, the cross-sectional $R^2$ and the Hansen-Jagannathan (HJ) distance measure. We report \emph{t}-statistics based on \citet{newey_west1987} standard errors with optimal lag length selection according \citet{andrews1991}. Note that standard errors for $\lambda$ are obtained via delta method. We also report simulated \emph{p}-values to test whether the HJ distance is equal to zero using a weighted sum of $\chi^2$-distributed random variables as in \citet{jagannathan/wang:96}. As described above, we use portfolio-level excess returns adjusted for bid-ask spreads for \emph{carry trade} and \emph{global imbalance} portfolios as test assets. As pricing factors, we use the $dol$ and the orthogonalized macro uncertainty shocks $\Delta u_{m}$.
+
+\begin{center}
+\textsc{Table \ref{tab:ap_portfolios_orth} about here}
+\end{center}
+
+We focus on the sign and the statistical significance of the factor price $\lambda$. We find negative and statistically significant estimates of the prices attached to current account uncertainty shocks: $\lambda_{ca}$ ranges from $-1.58$ (with a \emph{t}-statistic of $-2.60$) for \emph{Blue Chip Economic Indicators} to $-1.29$ (with a \emph{t}-statistic of $-4.36$) for \emph{Consensus Forecasts}. Here, a negative estimate of the factor price means higher currency premia for portfolios whose returns co-move negatively with current account uncertainty shocks, and lower currency premia for portfolios exhibiting a positive covariance with current account uncertainty shocks (i.e. uncertainty hedges). We also find that the model with current account uncertainty shocks produces a strong cross-sectional fit with $R^{2}$s of more than $80\%$. We are unable to reject the null that the HJ distance is equal to zero with large \emph{p}-values. Moreover, the values of the HJ distance for current account uncertainty shocks are smaller than the ones generated by the competing macro uncertainty shocks. For the latter, we find some evidence of statistical significance for $\lambda$, but we always reject the null that the HJ distance is equal to zero. Thus, we conclude that these models suffer from severe model misspecification.
+
+As pointed out by a growing literature, ignoring model misspecification can lead to the erroneous conclusion that a risk factor is priced, despite it not contributing to the pricing ability of the model \citep[e.g.,][]{KanRobotti:2009, GospodinovKanRobotti:2014, Bryzgalova:2015}. This happens as standard estimation and inference techniques become unreliable when factors are only weakly correlated (or uncorrelated) with test asset returns.
+
+\begin{center}
+\textsc{Figure \ref{fig:portfolios_correlations} about here}
+\end{center}
+Figure \ref{fig:portfolios_correlations} reports the sample correlations between our macro uncertainty shocks and the excess returns on the long-short strategies (i.e. $P_6$ minus $P_1$) arising from the \emph{carry trade} and \emph{global imbalance} portfolios. We refer to them as \emph{CAR} and \emph{IMB} factors, respectively. The sample correlation between $\Delta u_{ca}$ and \emph{CAR} evolves around $14\%$ whereas the sample correlation between $\Delta u_{ca}$ and \emph{IMB} ranges between $13\%$ and $20\%$. In contrast, the competing macro uncertainty shocks display a somewhat lower sample correlation, on average, below $5\%$.
+
+\paragraph{Model comparison.}
+The Hansen-Jagannthan metric is often used to rank the performance of asset pricing models. Despite being a powerful tool, it provides no method for a statistical comparison. Suppose for instance that the value of model A's HJ is less than the value of model B's HJ, are they also statistically different from each other once we account for the sampling error? \citet{Chen_Ludvigson2009} have addressed this question by proposing a procedure to compare statistically HJ distances of $K$ competing models using the reality check method of \citet{white:2000}. Let $j=1, \ldots, K$ index the asset pricing models reported in Table \ref{tab:ap_portfolios_orth}, with $j=1$ being the model delivering the smallest HJ distance among the $K$ competing models, i.e. the model based on current account uncertainty shocks. The null hypothesis is
+\begin{equation} \label{eq:NULL}
+	H_0 : \max_{j=2,\ldots,K} (d_{T,1}^2 - d_{T,j}^2) \leq 0,
+\end{equation}
+where $d_{T,j}^2$ denotes the squared HJ distance associated with model $j$. This hypothesis translates into saying that model 1 (the one based on current account uncertainty shocks) has the smallest pricing error among the $K$ competing models according to the $HJ$ distance. The alternative hypothesis
+\begin{equation} \label{eq:ALT}
+	H_1 : \max_{j=2,\ldots,K} (d_{T,1}^2 - d_{T,j}^2) > 0,
+\end{equation}
+implies that at least one of the competing models has a smaller pricing error than model 1 in terms of $HJ$ distance. We use the White's reality check test statistic $\mathcal{T}^W$ based on \citet{white:2000}, and the Hansen's modified reality check test statistic $\mathcal{T}^H$ based on \citet{hansen:2005}, which are defined as
+\begin{equation} \label{eq:Stats}
+	\mathcal{T}^{W} = \max_{j=2,\ldots,K}  \sqrt{T} (d_{T,1}^2 - d_{T,j}^2), \hspace{2cm}  \mathcal{T}^{H} = \max (\mathcal{T}^{W}, 0).
+\end{equation}
+We compute bootstrap estimates of the \emph{p}-values via the stationary bootstrap (i.e. resampling blocks of random lengths) of \citet{politis/romano:94} as
+\begin{equation}
+	p_W = \frac{1}{R} \sum_{r=1}^R \# (\mathcal{T}^{W}_{r} > \mathcal{T}^W), \hspace{2cm}  p_H = \frac{1}{R} \sum_{r=1}^R \# (\mathcal{T}^{H}_{r} > \mathcal{T}^H),
+\end{equation}
+where $R$ is the number of bootstrap replications, and $\#$ denotes the number of times the bootstrapped statistics is larger than the sample one. Since this is a one-sided test, the critical value is the equal to the $95th$ percentile of the bootstrap test statistic when we use a $5\%$ level of significance. Therefore, we reject the null hypothesis if $p_W$ or $p_H$ are less than 0.05, otherwise we do not reject the null. Table \ref{tab:ap_portfolios_orth} shows that we are unable to reject the null hypothesis -- the model based on $\Delta u_{ca}$ has the smallest pricing errors among the universe of models based on $\Delta u_{m}$ -- with large \emph{p}-values: $p_W$ ranges from $0.92$ to $0.95$ whereas $p_H$ from $0.62$ to $0.31$ when moving across surveys.\footnote{Results remain qualitatively similar if we use either \emph{carry trade} or \emph{global imbalance} portfolios separately as test assets. See Tables \ref{tab:appendix_portfolios_car}-\ref{tab:appendix_portfolios_imb} in the Internet Appendix.}
+
+We also run a simple horse race exercise as an alternative statistical procedure to check whether current account uncertainty shocks survive in the presence of other macro uncertainty shocks. While we use orthogonalized shocks for current account uncertainty, we leave the competing pricing factor unorthogonalized.
+
+\begin{center}
+\textsc{Table \ref{tab:ap_portfolios_orth_ca} about here}
+\end{center}
+We report these results in Table \ref{tab:ap_portfolios_orth_ca} and find strong evidence that $\Delta u_{ca}$ is not driven out by the competing $\Delta u_{m}$. We uncover statistical significance in favor of $\Delta u_{ca}$ for both $b$ and implied $\lambda$ estimates. While $\lambda$ asks whether the factor $j$ is priced, $b$ asks whether factor $j$ helps to price assets given the other factors. Overall, the empirical evidence reported in Tables \ref{tab:ap_portfolios_orth}-\ref{tab:ap_portfolios_orth_ca} coupled with the sample correlations in Figure \ref{fig:portfolios_correlations} confirm our key results on the pricing performance of the current account uncertainty shocks. %We now present some additional robustness checks before presenting our concluding remarks.
+
+\paragraph{Macro uncertainty and volatility risk.}
+We also check whether our portfolio-level asset pricing results are robust to including  $\Delta \sigma_{fx}$, the innovations to volatility risk of \citet{menkhoff_etal2012}, as an additional pricing factor. We report these results in Table \ref{tab:ap_portfolios_orth_vol}.
+
+\begin{center}
+\textsc{Table \ref{tab:ap_portfolios_orth_vol} about here}
+\end{center}
+Our empirical evidence supports the key results described above as we find statistical significance for both $b_{ca}$ and $\lambda_{ca}$ whereas both $b_{\sigma}$ and $\lambda_{\sigma}$ remain statistically insignificant. Nonetheless, $\Delta \sigma_{fx}$ helps to price excess returns when we consider the competing macro uncertainty shocks.\footnote{Results remain qualitatively similar when we replace volatility risk with economic policy uncertainty \citep[e.g.,][]{Baker/Bloom/Davis:2013}. See Table \ref{tab:appendix_portfolios_orth_Bloom} in the Internet Appendix.}
+
+
+\section{Conclusion}\label{sec:conclusion_UNC_CAR}
+A recent literature provides evidence that there is a systematic risk factor underlying carry trade returns \citep{lustig_etal2011,menkhoff_etal2012}. There is still, however, much to learn about the economic fundamentals driving this market phenomenon. This paper tackles exactly this question by shedding empirical light on the macroeconomic forces driving currency excess returns. Using a unique dataset of agents' expectations from the two independent international surveys, we construct measures of global uncertainty shocks over current account, short-term interest rate, inflation rate, real economic activity growth and foreign exchange rate by relying on measures of cross-sectional forecast dispersion. We then empirically test whether this uncertainty  plays a role in the cross-section of currency excess returns using a linear asset pricing framework motivated \citet{merton1973} and \citet{anderson_etal2009}, among many others. We find that investment currencies deliver low returns whereas funding currencies offer a hedge when current account uncertainty suddenly spikes, thus concluding that currency excess returns can be rationalized as compensation for unexpected shocks to uncertainty about global imbalances. Overall, we provide empirical evidence in support of an economically meaningful explanation of currency excess returns. % in line the recent theoretical and empirical findings of \citet{gabaix_maggiori2015} and \citet{dellacorte_etal2015}.
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% FIGURE 1
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\clearpage
+\begin{landscape}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[page = 1, scale = 0.70, angle = 00, trim = 00mm 00mm 00mm 00mm]{xtra/Figures/Disagreement/uncertainty.pdf}
+		\end{center}
+		
+		\caption{Measures of macro uncertainty} \label{fig:aggregate_disagreement}
+		\begin{footnotesize}
+			The figure presents measures of macro uncertainty constructed as cross-country averages of forecast dispersions. We use international macro forecasts collected from \textit{Blue Chip Economic Indicators} survey (dashed line) and \textit{Consensus Forecasts} survey (solid line). Shaded areas denote NBER-dated recession periods. We display standardized measures with zero means and unit variances for ease of comparison. The sample runs from July 1993 to July 2013.
+		\end{footnotesize}
+		
+	\end{figure}
+\end{landscape}
+\newpage
+\clearpage
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% FIGURE 2
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale = 0.50, angle = 00, trim = 00mm 90mm 00mm 00mm]{xtra/Figures/FormationDates/FormationDate_BC_Managed.eps}
+		\end{center}
+		\vspace{4cm}
+		
+		\caption{Forecasts formation dates: Blue Chip Economic Indicators} \label{fig:formation_dates_BC_managed} \smallskip
+		\begin{footnotesize}
+			The figure presents estimates of the prices attached to macro uncertainty shocks ($\lambda_{m}$) when we use different forecast formation dates for \emph{Blue Chip Economic Indicators} expectations. The test assets are individual excess returns computed on the business day prior to submission date in $t$ (the default case used throughout this paper), five business days before in $t-5$, and five business days after in $t+5$. The dashed-dotted (blue) line denotes factor prices obtained via Fama-MacBeth procedure. The dashed-triangle (red) lines denote the $95\%$ confidence interval based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length. Excess returns are monthly and net of bid-ask spreads. The sample runs from July $1993$ to July $2013$.
+		\end{footnotesize}
+	\end{figure}
+\end{landscape}
+\newpage
+\clearpage
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% FIGURE 3
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale = 0.50, angle = 00, trim = 00mm 90mm 00mm 00mm]{xtra/Figures/FormationDates/FormationDate_CS_Managed.eps}
+		\end{center}
+		\vspace{4cm}
+		
+		\caption{Forecasts formation dates: Consensus Forecasts} \label{fig:formation_dates_CS_managed} \smallskip
+		\begin{footnotesize}
+			The figure presents estimates of the prices attached to macro uncertainty shocks ($\lambda_{m}$) when we use different forecast formation dates for \emph{Consensus Forecasts} expectations. The test assets are individual excess returns computed on the business day prior to submission date in $t$ (the default case used throughout this paper), five business days before in $t-5$, and five business days after in $t+5$. The dashed-dotted (blue) line denotes factor prices obtained via Fama-MacBeth procedure. The dashed-triangle (red) lines denote the $95\%$ confidence interval based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length. Excess returns are monthly and net of bid-ask spreads. The sample runs from July $1993$ to July $2013$.
+		\end{footnotesize}
+	\end{figure}
+\end{landscape}
+
+\newpage
+\clearpage
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% FIGURE 4
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale = 0.60, angle = 00, trim = 00mm 150mm 00mm 00mm]{xtra/Figures/PricingErrors/Pricing.eps}
+		\end{center}
+		\vspace{4cm}
+		
+		\caption{Pricing errors: individual excess returns} \label{fig:pricing_errors} \smallskip
+		\begin{footnotesize}
+			The figure presents cross-sectional pricing errors for the linear factor model based on the dollar ($dol$), and current account ($\Delta u_{ca}$), inflation rate ($\Delta u_{if}$), short-term interest rate ($\Delta_{ir}$), real economic growth ($\Delta_{rg}$), and foreign exchange rate ($\Delta_{fx}$) uncertainty shocks. The test assets are country-level excess returns. The symbols denote the pricing errors of developed countries (solid circle), emerging countries (solid plus), and other countries (diamond). Excess returns are expressed in percentage per annum, and are net of bid-ask spreads. $\alpha$ denotes the average pricing error in percentage per annum. The sample runs from July $1993$ to July $2013$. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} and \textit{Consensus Forecasts}.
+		\end{footnotesize}
+		
+	\end{figure}
+\end{landscape}
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% FIGURE 5
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale = 0.65, angle = 00, trim = 00mm 60mm 00mm 00mm]{xtra/Figures/Portfolios/Correlations.pdf}
+		\end{center}
+		\vspace{4cm}
+		
+		\caption{Portfolio-level excess returns and macro uncertainty shocks} \label{fig:portfolios_correlations} \smallskip
+		\begin{footnotesize}
+			The figure presents the sample correlations between macro uncertainty shocks and excess returns on the long-short strategies (i.e. $P_6$ minus $P_1$) arising from the \emph{carry trade} and \emph{global imbalance portfolios}. We refer to them as \emph{CAR} and \emph{IMB}, respectively. Macro uncertainties are constructed as cross-country averages of forecast dispersions on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). Excess returns are net of bid-ask spreads. The sample runs from July $1993$ to July $2013$. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} and \textit{Consensus Forecasts}.
+		\end{footnotesize}
+		
+	\end{figure}
+\end{landscape}
+
+\newpage
+\clearpage
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 1
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	\begin{table}[ht]
+		
+		\caption{Portfolio sorted on past returns and proxies of uncertainty} \label{tab:double_sorts_unc+price}
+		
+		\begin{footnotesize}
+			This table presents currency portfolios sorted first into three buckets using past one-month exchange rate returns, and then into two groups by information uncertainty level. To proxy for uncertainty, we use country-specific measures of forecast dispersion on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$), and one-month implied volatilities ($iv$) from at-the-money currency options traded over-the-counter. \emph{Panel A} reports the excess return from a strategy that buys past winners and sells past losers in periods of high uncertainty $u_h$ and in periods of low uncertainty $u_l$. The return differential between these momentum strategies is denoted as $u_h - u_l$. Excess returns are reported in percentage per annum. \emph{Panel B} presents \emph{t}-statistics for the null hypothesis of equal return differentials $u_h - u_l$ for different proxies of information uncertainty. We compute \emph{t}-statistics using \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length. The sample runs from July $1993$ to July $2013$. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} and \textit{Consensus Forecasts}. Implied volatility data are from JP Morgan.
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{double_sorts_unc+price}
+		
+	\end{table}
+\end{landscape}
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 2
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	\begin{table}[ht]
+		
+		\caption{Sample correlation: macro uncertainty} \label{tab:summary_global_disagreement}
+		\begin{footnotesize}
+			This table presents the sample correlations of macro uncertainty shocks on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). The sample runs from July $1993$ to July $2013$. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} and \textit{Consensus Forecasts}.
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{summary_global_disagreement}
+		
+	\end{table}
+\end{landscape}
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 3
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	
+	\begin{table}[ht]
+		\caption{Country-level asset pricing tests: macro uncertainty} \label{tab:ap_individual}
+		
+		\begin{footnotesize}
+			This table presents country-level cross-sectional asset pricing results for a linear factor model based on the dollar factor ($dol$) and macro uncertainty shocks ($\Delta u_{m}$) computed as innovations to the cross-country average of forecast dispersions on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). The first principal component of these innovations is referred to as $pc$. Orthogonalized macro uncertainty shocks are computed by projecting each $\Delta u_{m}$ on the remaining uncertainty shocks. The table reports estimates of the factor price $\lambda$ obtained via Fama-MacBeth procedure, the cross-sectional $R^{2}$, and the \emph{t}-statistic -- based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length -- in brackets. A bolded $\lambda$ denotes statistical significance at $5\%$ (or lower) obtained via 1,000 stationary bootstrap repetitions. All excess returns are net of bid-ask spreads. The sample runs from July $1993$ to July $2013$. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} and \textit{Consensus Forecasts}.
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{ap_individual}
+		
+	\end{table}
+\end{landscape}
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 4
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	\begin{table}[ht]
+		\caption{Country-level asset pricing tests: sub-samples of currencies} \label{tab:ap_individual_liquid}
+		\begin{footnotesize}
+			This table presents country-level cross-sectional asset pricing results for a linear factor model based on the dollar factor ($dol$) and macro uncertainty shocks ($\Delta u_{m}$) computed as innovations to the cross-country average of forecast dispersions on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). The first principal component of these innovations is referred to as $pc$. Current account uncertainty shocks are orthogonalized against the remaining uncertainty shocks. In \emph{Panel A}, we remove the currencies subject to capital controls using the financial openness index of \citet{chinn_ito/06}, i.e. we remove a currency when the index has a negative value. In \emph{Panel B}, we retain floating and quasi-floating currencies using the exchange rate classification index of \citet{IRR/2011}, i.e, we retain a currency with a classification code ranging from 9 to 13. The table reports estimates of the factor price $\lambda$ obtained via Fama-MacBeth procedure, the cross-sectional $R^{2}$, and the \emph{t}-statistic based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length in brackets. A bolded $\lambda$ denotes statistical significance at $5\%$ (or lower) obtained via 1,000 stationary bootstrap repetitions. All excess returns are net of bid-ask spreads. The sample runs from July $1993$ to July $2013$. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} and \textit{Consensus Forecasts}.
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{ap_individual_liquid}
+		
+	\end{table}	
+\end{landscape}
+
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 5
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	
+	\begin{table}[ht]
+		\caption{Country-level asset pricing tests: volatility risk and policy uncertainty} \label{tab:ap_individual_Bloom}
+		\begin{footnotesize}
+			This table presents country-level cross-sectional asset pricing results for a linear factor model based on the dollar factor ($dol$), macro uncertainty shocks ($\Delta u_{m}$), foreign exchange volatility shocks ($\Delta\sigma_{fx}$), monetary policy uncertainty shocks ($\Delta u_{mp}$), and economic policy uncertainty shocks ($\Delta u_{ep}$). We compute $\Delta u_{m}$ as innovations to the cross-country average of forecast dispersions on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). The first principal component of these innovations is referred to as $pc$. All macro uncertainty shocks are orthogonalized by projecting each $\Delta u_{m}$ on the remaining uncertainty shocks. We compute $\Delta \sigma_{fx}$ as innovations to the cross-country average of foreign exchange rate volatilities, $\Delta u_{mp}$ as innovations to the cross-country average variation of policy interest rates, and $\Delta u_{ep}$ as innovations to the news-based economic policy uncertainty measure of \citet{Baker/Bloom/Davis:2013}. The table reports estimates of the factor price $\lambda$ obtained via Fama-MacBeth procedure, the cross-sectional $R^{2}$, and the \emph{t}-statistic based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length in brackets. A bolded $\lambda$ denotes statistical significance at $5\%$ (or lower) obtained via 1,000 stationary bootstrap repetitions. All excess returns are net of bid-ask spreads. The sample runs from July $1993$ to July $2013$. Exchange rates and interest rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} and \textit{Consensus Forecasts}.  The news-based uncertainty measure is from Nicholas Bloom's website.
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{ap_individual_Bloom}
+	\end{table}	
+	
+\end{landscape}
+
+
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 6
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	
+	\begin{table}[ht]
+		\caption{Portfolio-level asset pricing tests: macro uncertainty} \label{tab:ap_portfolios_orth}
+		\begin{footnotesize}
+			This table presents portfolio-level cross-sectional asset pricing results for a linear factor model based on the dollar factor ($dol$) and macro uncertainty shocks ($\Delta u_{m}$) computed as innovations to the cross-country average of forecast dispersions on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). The first principal component of these innovations is referred to as $pc$. All macro uncertainty shocks are orthogonalized by projecting each $\Delta u_{m}$ on the remaining uncertainty shocks. As test assets, we employ six portfolios sorted on forward discounts (carry trade portfolios) and six portfolios sorted on net foreign asset positions and the share of external liabilities denominated in foreign currency (global imbalance portfolios). The table reports estimates of the factor loadings $b$, factor price $\lambda$ and cross-sectional $R^{2}$ obtained via GMM procedure. \emph{t}-statistic based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length are reported in brackets. $HJ$ denotes the \citet{hansen/jagannathan:97} distance measure (with simulated \emph{p}-value in parentheses) for the null hypothesis that the normalized maximum pricing error is equal to zero. $\mathcal{T}^W$ and $\mathcal{T}^H$ denote the \citet{white:2000} and \citet{hansen:2005} reality check test statistics for the null hypothesis that the model based on $ca$ has the smallest pricing error according to the squared $HJ$ distance. We report \emph{p}-values in parentheses obtained via 10,000 stationary bootstrap repetitions. Excess returns are net of bid-ask spreads and expressed in percentage per month. The portfolios are rebalanced monthly from July 1993 to July 2013. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} (Panel A) and \textit{Consensus Forecasts} (Panel B).
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{ap_portfolios_orth_v2}
+	\end{table}	
+	
+\end{landscape}
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 7
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	
+	\begin{table}[ht]
+		\caption{Portfolio-level asset pricing tests: horse race} \label{tab:ap_portfolios_orth_ca}
+		\begin{footnotesize}
+			This table presents portfolio-level cross-sectional asset pricing results for a linear factor model based on the dollar factor ($dol$) and macro uncertainty shocks ($\Delta u_{m}$) computed as innovations to the cross-country average of forecast dispersions on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). The first principal component of these innovations is referred to as $pc$. Current account uncertainty shocks are orthogonalized by projecting each $\Delta u_{ca}$ on the remaining uncertainty shocks. As test assets, we employ six portfolios sorted on forward discounts (carry trade portfolios) and six portfolios sorted on net foreign asset positions and the percentage share of foreign currency-denominated external liabilities (global imbalance portfolios). The table reports estimates of the factor loadings $b$, factor price $\lambda$ and cross-sectional $R^{2}$ obtained via GMM procedure. \emph{t}-statistic based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length are reported in brackets. $HJ$ denotes the \citet{hansen/jagannathan:97} distance measure (with simulated \emph{p}-value in parentheses) for the null hypothesis that the normalized maximum pricing error is equal to zero. Excess returns are net of bid-ask spreads and expressed in percentage per month. The portfolios are rebalanced monthly from July 1993 to July 2013. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} (Panel A) and \textit{Consensus Forecasts} (Panel B).
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{ap_portfolios_orth_ca}
+	\end{table}	
+	
+\end{landscape}
+
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% TABLE 8
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\begin{landscape}
+	
+	\begin{table}[ht]
+		\caption{Portfolio-level asset pricing tests: volatility risk} \label{tab:ap_portfolios_orth_vol}
+		\begin{footnotesize}
+			This table presents portfolio-level cross-sectional asset pricing results for a linear factor model based on the dollar factor ($dol$), foreign exchange volatility shocks ($\Delta\sigma_{fx}$) and macro uncertainty shocks ($\Delta u_{m}$) computed as innovations to the cross-country average of forecast dispersions on current account ($ca$), inflation rate ($if$), short-term interest rate ($ir$), real economic growth ($rg$), and foreign exchange rate ($fx$). The first principal component of these innovations is referred to as $pc$. All macro uncertainty shocks are orthogonalized by projecting each $\Delta u_{m}$ on the remaining uncertainty shocks. As test assets, we employ six portfolios sorted on forward discounts (carry trade portfolios) and six portfolios sorted on net foreign asset positions and the percentage share of foreign currency-denominated external liabilities (global imbalance portfolios). The table reports estimates of the factor loadings $b$, factor price $\lambda$ and cross-sectional $R^{2}$ obtained via GMM procedure. \emph{t}-statistic based on \citet{newey_west1987} standard errors with \citet{andrews1991} optimal lag length are reported in brackets. $HJ$ denotes the \citet{hansen/jagannathan:97} distance measure (with simulated \emph{p}-value in parentheses) for the null hypothesis that the normalized maximum pricing error is equal to zero. Excess returns are net of bid-ask spreads and expressed in percentage per month. The portfolios are rebalanced monthly from July 1993 to July 2013. Exchange rates are from \textit{Datastream} whereas international forecasts are collected from \textit{Blue Chip Economic Indicators} (Panel A) and \textit{Consensus Forecasts} (Panel B).
+		\end{footnotesize}
+		
+		\subimport*{./xtra/Tables/}{ap_portfolios_orth_vol}
+	\end{table}	
+	
+\end{landscape}
